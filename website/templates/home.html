@@ -1,3 +1,47 @@
 {% extends "base.html" %}
 {% block title %}Home Page{% endblock %}
-{% block content %}<h3>Home Page Content</h3>{% endblock %}
+{% block content %}<h3>Home Page Content</h3>
+<style type="text/css">
+    .col-6 {
+        border: 1px solid red;
+    }
+
+    .my-vh {
+        height: 100vh;
+    }
+
+    .my-card {
+        height: 100%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="my-vh">
+        <div class="row h-100">
+            <div class="col-6 p-3">
+                <div class="card my-card p-5">
+                    text1
+                </div>
+            </div>
+            <div class="col-6 p-3">
+                <div class="card my-card p-5">
+                    text2
+                </div>
+            </div>
+            <div class="col-6 p-3">
+                <div class="card my-card p-5">
+                    text3
+                </div>
+            </div>
+            <div class="col-6 p-3">
+                <div class="card my-card p-5">
+                    text4
+                </div>
+            </div>
+            <div class="col-6 p-3">
+                <div class="card my-card p-5">
+                    text4
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flask Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'navbar.html'%}
+  <div class ="container">
+    {% block body %}{% endblock%}
+  </div>
+</body>
+</html>

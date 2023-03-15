@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from website import mongo
 
 routes = Blueprint("routes", __name__)
 
@@ -15,9 +16,12 @@ routes = Blueprint("routes", __name__)
 #         },
 #     ]
 
+
 @routes.route("/")
 def home():
+    print(mongo.list_database_names())
     return render_template("home.html")
+
 
 @routes.route("/blogs")
 def blogs():

@@ -4,21 +4,15 @@
     <h1>ITV Website with some information in article form</h1>
     <p class = "lead"> Articles listed below
   </div>
-  <div class="card mb-3 mx-auto" style="width: 50rem;">
-    <img src="https://hips.hearstapps.com/hmg-prod/images/chow-chow-portrait-royalty-free-image-1652926953.jpg" class="card-img-top mx auto" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  {% for card_dict in cards_to_render %}
+    <div class="card mb-3 mx-auto" style="width: 50rem;">
+      <img src="data:image/png;base64, {{ card_dict['base_64_img'] }}" class="card-img-top mx auto" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ card_dict['card-title'] }}</h5>
+        <p class="card-text">{{ card_dict['card-sub-title'] }}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
     </div>
-  </div>
-  <div class="card mb-3 mx-auto" style="width: 50rem;">
-    <img src="https://hips.hearstapps.com/hmg-prod/images/happy-dog-outdoors-royalty-free-image-1652927740.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+  {% endfor %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 {% endblock %}

@@ -1,6 +1,5 @@
 from flask import Flask
 from dotenv import find_dotenv, load_dotenv
-from flask_pymongo import PyMongo
 from pymongo import MongoClient
 
 import os

@@ -12,7 +12,7 @@ print(mongo_username)
 print(mongo_password)
 
 mongo = MongoClient(
-    f"mongodb+srv://lukebing:IK0Mm3dh4JyrsgDs@cluster0.ejabcra.mongodb.net/?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
+    f"mongodb+srv://{mongo_username}:{mongo_password}@cluster0.ejabcra.mongodb.net/?retryWrites=true&w=majority"
 )
 
 def main():

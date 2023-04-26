@@ -8,8 +8,11 @@ load_dotenv(find_dotenv())
 mongo_username = os.environ.get("MONGO_USERNAME")
 mongo_password = os.environ.get("MONGO_PWD")
 
+print(mongo_username)
+print(mongo_password)
+
 mongo = MongoClient(
-    f"mongodb+srv://{mongo_username}:{mongo_password}@cluster0.ejabcra.mongodb.net/?retryWrites=true&w=majority"
+    f"mongodb+srv://lukebing:IK0Mm3dh4JyrsgDs@cluster0.ejabcra.mongodb.net/?retryWrites=true&w=majority&ssl=true&ssl_cert_reqs=CERT_NONE"
 )
 
 def main():

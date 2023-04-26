@@ -39,7 +39,7 @@ def home():
     return render_template("home.html", cards_to_render=list_of_dicts)
 
 
-@routes.route("/blogs")
-def blogs():
-    return render_template("blogs.html")
+@routes.route("/login",methods=['GET'])
+def login():
+    return render_template("login.html")
     # return render_template("blogs.html", blogs = Blogs)

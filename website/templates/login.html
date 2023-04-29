@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block body %}
-<form action="" method="post">
+<form action="{{ url_for('routes.validate') }}" method="post">
   <div class="form-group">
       <label for="Fullname">Full name</label>
       <input name="fullname" class="form-control" id="inputFullName" aria-describedby="emailHelp" placeholder="Enter full name">

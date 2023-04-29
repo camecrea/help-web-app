@@ -15,10 +15,12 @@ mongo = MongoClient(
     f"mongodb+srv://{mongo_username}:{mongo_password}@cluster0.ejabcra.mongodb.net/?retryWrites=true&w=majority"
 )
 
+
 def main():
     app = Flask(__name__)
 
     app.config["DEBUG"] = True
+    app.secret_key = "mysecretkey"
 
     from .routes import routes
 
